@@ -7,10 +7,9 @@ const {
   resolve,
   parse,
   format,
-  normalize,
 } = require("path");
 
-console.log(__filename);
+// console.log(__filename);
 
 /**
  * basename 获取路径的基础名称 - 返回文件路径的最后一个部分
@@ -45,10 +44,15 @@ console.log(__filename);
 // console.log(join('/a/b/', 'c', '', './process.js'))
 
 
-// resolve 返回绝对路径
+/**
+ * resolve 返回绝对路径
+ * 接受两部分参数，[from] to
+ * 将to部分拼接后，判断是否为绝对路径，非绝对路径是拼接到盘符后面
+ * */ 
 
-console.log(resolve('/a/b/', 'c', '', './process.js'))
-
+// console.log(resolve('/a/b/', 'c', '', './process.js'))
+console.log(resolve('index.html'))
+// console.log(process.cwd())
 
 /**
  * parse 解析路径
@@ -66,7 +70,3 @@ console.log(resolve('/a/b/', 'c', '', './process.js'))
 // format 序列化路径
 
 // console.log(format(obj));
-
-// normalize 规范化路径
-
-// console.log(normalize('a/b.s.js/c'))
