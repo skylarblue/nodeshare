@@ -10,6 +10,4 @@ myEvent.on("事件1", () => {
   console.log("事件1 -2 触发了");
 });
 
-console.log(111);
-
-module.exports = myEvent
+myEvent.emit('事件1')
